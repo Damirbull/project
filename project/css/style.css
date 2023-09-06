@@ -12,6 +12,9 @@
 .wrapper{
     min-width: 100%;
     overflow: hidden;
+    white-space: nowrap; /* Запрещаем перенос текста на новую строку */
+    overflow: hidden;    /* Скрываем часть текста, которая не помещается */
+    text-overflow: ellipsis; /* Добавляем многоточие для обрезанных текстов */
 }
 
 ._container {
@@ -28,7 +31,6 @@
   display: flex;
   min-height: 104px;
   align-items: center;
-
 }
 
 .header__container{
@@ -47,19 +49,19 @@
 }
 .menu{
 
-  margin: 5px 40px 0px 0px;
+  margin: 5px 320px 0px 0px;
     
 }
 
 
 .menu__iteam{
-    margin: 0px 0px 0px 32px;
+  margin: 0px 0px 0px 32px;
+  max-width: 150px;
 }
 
 
 
-.menu__link,
-.menu__link2{
+.menu__link{
   color: var(--Subtitle-Darkness-Gray, #969696);
   font-family: Nunito Sans;
   font-size: 18px;
@@ -93,3 +95,33 @@
   padding: 0.2em 0.5em;
   border-radius: 5px;
 }
+
+
+.button_blue {
+  flex: 0 0 252px;
+  display: flex;
+  justify-content: flex-end;
+  color: var(--Subtitle-Darkness-Gray, #969696);
+  font-family: Nunito Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 25.2px */
+  letter-spacing: 0.36px;
+  text-decoration: none;
+  margin: 13px 0px 0px 0px;
+  max-width: 130px;
+  min-width: 130px;
+
+}
+
+.menu__iteam:not(.no-underline),
+.header__button:not(.no-underline){
+  display: inline-block;
+  padding-bottom: 2px;
+  text-decoration-skip-ink: auto;
+  width: auto;
+  text-decoration: underline;
+  text-underline-offset: 0.6em;
+}
+
